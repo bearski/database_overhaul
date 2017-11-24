@@ -10,6 +10,7 @@ defmodule DatabaseOverhaul.Application do
     children = [
       # Starts a worker by calling: DatabaseOverhaul.Worker.start_link(arg)
       # {DatabaseOverhaul.Worker, arg},
+      #worker(DatabaseOverhaul.Repo, []),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
