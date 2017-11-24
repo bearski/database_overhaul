@@ -9,7 +9,7 @@ defmodule DatabaseOverhaul.Repo.Migrations.CreateReceipts do
       add :body, :jsonb
       add :original, :jsonb
       add :search_vector, :tsvector
-      timestamps
+      timestamps()
     end
     # create index(:receipts, [:inbox_id])
   end

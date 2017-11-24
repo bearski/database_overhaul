@@ -11,7 +11,7 @@ defmodule DatabaseOverhaul.Repo.Migrations.CreateTriggers do
       add :deleted, :bool
       add :job_id, :int
       add :search_vector, :tsvector
-      timestamps
+      timestamps()
     end
     # create index(:receipts, [:inbox_id])
   end
