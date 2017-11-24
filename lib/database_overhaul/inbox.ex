@@ -1,4 +1,4 @@
-defmodule DatabaseOverhaul.Receipt do
+defmodule DatabaseOverhaul.Inbox do
   use Ecto.Schema
 
   @primary_key {:id, Ecto.UUID, [autogenerate: true]}

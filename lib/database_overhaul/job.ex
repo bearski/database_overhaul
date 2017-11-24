@@ -1,16 +1,22 @@
-defmodule DatabaseOverhaul.Trigger do
+defmodule DatabaseOverhaul.Job do
   use Ecto.Schema
 
-  schema "triggers" do
+  schema "jobs" do
     field :name, :string
-    field :criteria, :map
+    field :trigger_id, :integer
     field :inbox_id, Ecto.UUID
-    field :type, :string
-    field :interval, :integer
-    field :deleted, :boolean
-    field :job_id, :integer
-    field :search_vector, :map
+    field :expression, :string
+    field :credential_id, :integer
+    field :autoprocess, :boolean
+    field :adaptor, :string
+    field :adaptor_version, :string
+    field :archived, :boolean
+    field :path_in_external_repo, :string
+    field :branch_in_external_repo, :string
+    field :events, :map
+    field :flow_id, :integer
     timestamps([usec: true])
+
   end
 
   # @required_fields ~w(inbox_id)
