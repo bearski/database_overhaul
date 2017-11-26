@@ -6,11 +6,12 @@ defmodule DatabaseOverhaul.Application do
   use Application
 
   def start(_type, _args) do
+    import Supervisor.Spec, warn: false
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: DatabaseOverhaul.Worker.start_link(arg)
       # {DatabaseOverhaul.Worker, arg},
-      #worker(DatabaseOverhaul.Repo, []),
+      worker(DatabaseOverhaul.Repo, []),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

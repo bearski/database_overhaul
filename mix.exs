@@ -17,9 +17,10 @@ defmodule DatabaseOverhaul.Mixfile do
       extra_applications: [
         :logger,
         :postgrex,
-        :ecto
+        :ecto,
+        :database_overhaul
       ],
-      mod: {DatabaseOverhaul.Application, []}
+      mod: {DatabaseOverhaul, []}
     ]
   end
 

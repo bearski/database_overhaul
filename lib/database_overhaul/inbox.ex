@@ -1,10 +1,11 @@
 defmodule DatabaseOverhaul.Inbox do
   use Ecto.Schema
-
+  use Mix.Task
+  
   @primary_key {:id, Ecto.UUID, [autogenerate: true]}
   @foreign_key_type Ecto.UUID
 
-  schema "triggers" do
+  schema "inboxes" do
     field :title, :string
     field :plan_id, :integer
     field :stripe_subscription_token, :string
@@ -28,4 +29,7 @@ defmodule DatabaseOverhaul.Inbox do
   #   model
   #   |> cast(params, @required_fields ++ @optional_fields)
   # end
+  def last_name do
+    "Bearski"
+  end
 end
