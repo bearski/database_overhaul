@@ -1,7 +1,9 @@
 defmodule DatabaseOverhaul.Inbox do
   use Ecto.Schema
-  use Mix.Task
-  
+
+  # use Mix.Task
+  # import Mix.Ecto
+
   @primary_key {:id, Ecto.UUID, [autogenerate: true]}
   @foreign_key_type Ecto.UUID
 
